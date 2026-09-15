@@ -181,6 +181,8 @@ int main()                         //主函数区，有且仅有一个
    #define PI 3.14f
 
    m=3.14f * r * r 等价 m=PI * r * r
+   
+   # 随堂练习
 
 ```c
 #include<stdio.h>
