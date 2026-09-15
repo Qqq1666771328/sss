@@ -11,21 +11,23 @@ getchar();
 }
 ```
 
-1. \+字母组成转义序列
-
-2. \n是换行
-
-   
-
 # 变量
 
 ## 变量与赋值
 
 1. 声明一个整数a int a；
+
 2. 声明一个小数b float b；
+
 3. 初始化变量a为1，b为3.14      int a=1       float b=3.14； 
+
 4. 给a、b赋值     a=2  b=5.6；
+
 5. 变量的声明必须在使用前
+
+6. 可以一次声明多个，之间用逗号隔开
+
+   int a,b,c;      int a=,b=2,c;
 
 ## 变量的运算
 
@@ -110,3 +112,97 @@ int main()                         //主函数区，有且仅有一个
 
 1. 读入用户输出内容赋值变量
 2. scanf(%d,&lenth);
+
+## 变量的命名规则
+
+1. 只能包含英文字母、数字、下划线
+2. 不能以数字开头
+3. 不能和关键字重复 （include main int...）
+
+## 格式化输入/输出
+
+1. printf函数
+
+2. printf(“格式串”参数1,参数2,参数3。。。)；
+
+3. 占位符 %d %f  转义序列 \n
+
+4. print a=3; float b=3.14;
+
+   printf（”a=%d\nb=%f”a,b);
+
+5. %n.md %n.mf
+
+   n代表最小栏宽，如果不足会在左侧补空格，超过则正常显示
+
+   前者m代表有效位数，不足补0，超过正常显示
+
+   后者m表示小数点后有效位数，默认为6
+
+6. 占位符与参数不匹配
+
+   参数多/少于占位符
+
+   数据类型不匹配
+
+   ```c
+   int a=3;
+   float b=3.14;
+   int main(){
+       printf("a=%d\nb=%.2f",a,b);
+       return 0;
+   }
+   ```
+
+7. scanf函数
+
+8. scanf(“格式串”,参数1,参数2,参数3);
+
+   ```c
+   int a=3;
+   float b=3.14;
+   int main(){
+       scanf("a=%d\nb=%f",&a,&b);
+       printf("a=%d\nb=%.2f",a,b);
+       return 0;
+   }
+   ```
+
+   
+
+# 指令
+
+## 预处理指令
+
+1. #include 包含
+
+2. #define 宏定义
+
+   #define PI 3.14f
+
+   m=3.14f * r * r 等价 m=PI * r * r
+
+```c
+#include<stdio.h>
+float r1;
+float r2;
+float v1;
+float v2;
+
+int main(void)
+{
+    printf("请输入半径1=");
+    scanf("%f",&r1);
+
+    printf("请输入半径2=");
+    scanf("%f",&r2);
+
+    v1=4.0f/3.0f*r1*r1*r1*3.14159;
+    v2=4.0f/3.0f*r2*r2*r2*3.14159;
+
+    printf("体积1为%f立方米,体积2为%f立方米。",v1,v2);
+    
+    return 0;
+}
+```
+
