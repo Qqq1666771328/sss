@@ -283,7 +283,7 @@ int main(void)
        }
        else
        {
-           a=a*5;
+           a=a*3;
            printf("这是一奇数%d",a);  
        }
    
@@ -341,6 +341,130 @@ int main(void)
 
    break；
 
-8. 
+8. while语句的基本结构
+   while(表达式)语句
+
+9. 编写一个简单的C程序,在屏幕上显示5到1
+
+   ```c
+   #include <stdio.h>
+   int i=5;
+   int main()
+   {
+       while(i)
+       {
+           printf("%d\n",i);
+           i=i-1;
+       }
+   return 0;
+   }
+   ```
 
    
+
+10. i--和--i的区别
+
+11. 无限循环while(1)
+
+12. do语句
+
+    do{语句} while(表达式)
+
+    设计一个C程序，计算用户输入的整数的位数
+
+    ```c
+    #include <stdio.h>
+    int num;
+    int i;
+    int main()
+    {
+        printf("请输入一个整数:");
+        scanf("%d",&num);
+        do
+        {
+            num/=10;
+            i++;
+    
+        }
+        while(num>0);
+    printf("有%d位",i);
+    return 0;
+    }
+    ```
+
+    
+
+13. for语句
+
+    for(表达式1;表达式2;表达式3)语句
+
+    编写一个简单的C程序,在屏幕上显示5到1
+
+    ```c
+    #include<stdio.h>
+    int i;
+    int main()
+    {
+        for(i=5;i>0;i--)
+        {
+             printf("%d\n",i);
+        }
+        return 0;
+    }
+    ```
+
+    
+
+14. for语句中的省略表达
+
+15. C99中的for语句表达式1
+
+16. 逗号运算符
+
+17. 退出循环
+
+18. break语句
+
+    设计一个C代码，判断用户输入的数是不是素数
+
+    ```c
+    #include <stdio.h>
+    int num,i;
+    int main()
+    {
+        printf("请输入一个正整数：");
+        scanf("%d",&num);
+        for(i=2;i<num;i++)
+        {
+            if(num%i==0)            
+                break;      
+        }
+        if(i<num)
+        printf("合数");
+    
+        else
+        printf("质数");
+    
+    return 0;
+    }
+    ```
+
+    
+
+19. continuei语句
+
+20. goto语句
+
+21. goto语句
+    标识符:   语句
+    goto标识符;
+
+22. 空语句
+
+23. 
+
+24. 
+
+25. 
+
+    
